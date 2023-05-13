@@ -23,7 +23,7 @@ public class ProductController {
 
     @GetMapping
     public List<String> getProducts() {
-        var products = new ArrayList<String>();
+        List<String> products = new ArrayList<>();
         products.add("1");
         products.add("2");
         products.add("3");
