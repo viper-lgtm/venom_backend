@@ -9,9 +9,9 @@ public interface UserService {
 
     User update(User user);
 
-    User findByName(String name);
+    Optional<User> findByName(String name);
 
-    User findByEmail(String email);
+    Optional<User> findByEmail(String email);
 
     List<User> findAll();
 

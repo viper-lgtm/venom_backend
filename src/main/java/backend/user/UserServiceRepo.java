@@ -22,13 +22,13 @@ public class UserServiceRepo implements UserService {
     }
 
     @Override
-    public User findByName(String name) {
+    public Optional<User> findByName(String name) {
         return null;
     }
 
     @Override
-    public User findByEmail(String email) {
-        return null;
+    public Optional<User> findByEmail(String email) {
+        return repository.findByEmail(email);
     }
 
     @Override
@@ -38,6 +38,6 @@ public class UserServiceRepo implements UserService {
 
     @Override
     public Optional<User> findById(Long id) {
-        return Optional.empty();
+        return repository.findById(id);
     }
 }
