@@ -13,7 +13,11 @@ public class UserServiceRepo implements UserService {
 
     @Override
     public User create(User user) {
-        return repository.save(user);
+        Optional<User> userByEmail = repository.findByEmail(user.getEmail());
+        if (!userByEmail.isPresent()) {
+            return repository.save(user);
+        }
+        return null;
     }
 
     @Override
