@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Data
 @Accessors(chain = true)
-public class Orders {
+public class Ordering {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,6 +23,6 @@ public class Orders {
     @OneToOne
     private User user;
 
-    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ordering", cascade = CascadeType.ALL)
     private List<Orderline> orderlines;
 }
