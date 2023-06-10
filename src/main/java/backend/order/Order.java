@@ -9,8 +9,8 @@ import lombok.experimental.Accessors;
 
 import java.util.List;
 
-@Entity(name = "`order`")
-//@Table(name = "`order`")
+@Entity
+@Table(name = "`order`")
 @Data
 @Accessors(chain = true)
 public class Order {
