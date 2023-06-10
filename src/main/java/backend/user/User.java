@@ -1,14 +1,9 @@
 package backend.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.experimental.Accessors;
 
-//@Entity(name = "User")
 @Entity
-//@Accessors(chain = true)
 @Data
 public class User {
 
@@ -19,6 +14,8 @@ public class User {
     private String email;
     private String name;
     private String picture;
+    private String city;
+    private String address;
 
 //    @OneToMany
 //    private List<Orderline> orderlineList;

@@ -23,7 +23,7 @@ public class UserServiceRepo implements UserService {
 
     @Override
     public User update(User user) {
-        return null;
+        return repository.save(user);
     }
 
     @Override

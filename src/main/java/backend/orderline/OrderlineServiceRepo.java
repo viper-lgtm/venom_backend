@@ -1,5 +1,6 @@
 package backend.orderline;
 
+import backend.order.OrderRepository;
 import backend.product.Product;
 import backend.product.ProductRepository;
 import backend.user.User;
@@ -19,6 +20,7 @@ public class OrderlineServiceRepo implements OrderlineService {
     private final OrderlineRepository orderlineRepository;
     private final ProductRepository productRepository;
     private final UserRepository userRepository;
+    private final OrderRepository orderRepository;
 
     @Override
     public Orderline createOrderline(OrderlineModel orderlineModel) {

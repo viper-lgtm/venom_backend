@@ -18,6 +18,12 @@ public class UserController {
         return service.create(user);
     }
 
+    @PutMapping
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public User update(@RequestBody User user) {
+        return service.update(user);
+    }
+
     @GetMapping("/id/{id}")
     @ResponseStatus(HttpStatus.OK)
     public User findById(@PathVariable Long id) {

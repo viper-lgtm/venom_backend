@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping("/orderlines")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class OrderlineControl {
+public class OrderlineControler {
     private final OrderlineServiceRepo service;
 
     @PostMapping
