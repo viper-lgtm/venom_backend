@@ -1,9 +1,8 @@
 package backend.orderline;
 
-import backend.order.Order;
+import backend.order.Orders;
 import backend.product.Product;
 import backend.user.User;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -27,5 +26,5 @@ public class Orderline {
     private User user;
 
     @ManyToOne
-    private Order order;
+    private Orders orders;
 }

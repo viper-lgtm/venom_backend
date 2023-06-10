@@ -2,7 +2,6 @@ package backend.order;
 
 import backend.orderline.Orderline;
 import backend.user.User;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -10,10 +9,9 @@ import lombok.experimental.Accessors;
 import java.util.List;
 
 @Entity
-//@Table(name = "order")
 @Data
 @Accessors(chain = true)
-public class Order {
+public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +23,6 @@ public class Order {
     @OneToOne
     private User user;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private List<Orderline> orderlines;
 }
