@@ -8,10 +8,10 @@ import lombok.experimental.Accessors;
 
 import java.util.List;
 
-@Entity(name = "`order`")
+@Entity
 @Data
 @Accessors(chain = true)
-public class Order {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,6 +23,6 @@ public class Order {
     @OneToOne
     private User user;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "orderItem", cascade = CascadeType.ALL)
     private List<Orderline> orderlines;
 }

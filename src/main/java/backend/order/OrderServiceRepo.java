@@ -18,14 +18,14 @@ public class OrderServiceRepo implements OrderService {
     private final OrderlineRepository orderlineRepository;
 
     @Override
-    public Order create(OrderDto orderDto) {
+    public OrderItem create(OrderDto orderDto) {
         User user = userRepository.findById(orderDto.getUserId()).get();
         List<Orderline> orderlinesByUserId = orderlineRepository.findOrderlinesByUserId(orderDto.getUserId());
-        Order order = new Order()
+        OrderItem orderItem = new OrderItem()
                 .setTotalPrice(orderDto.getTotalPrice())
                 .setDeliveryAddress(orderDto.getAddress())
                 .setUser(user)
                 .setOrderlines(orderlinesByUserId);
-        return orderRepository.save(order);
+        return orderRepository.save(orderItem);
     }
 }

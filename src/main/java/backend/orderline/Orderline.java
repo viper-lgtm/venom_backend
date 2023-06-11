@@ -1,6 +1,6 @@
 package backend.orderline;
 
-import backend.order.Order;
+import backend.order.OrderItem;
 import backend.product.Product;
 import backend.user.User;
 import jakarta.persistence.*;
@@ -26,5 +26,5 @@ public class Orderline {
     private User user;
 
     @ManyToOne
-    private Order order;
+    private OrderItem orderItem;
 }
