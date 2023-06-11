@@ -17,7 +17,7 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private float totalPrice;
+    private Float totalPrice;
     private String deliveryAddress;
 
     @OneToOne
